@@ -1,0 +1,29 @@
+# Archivo robots.txt para NC FiscAl
+# Permite acceso a todos los buscadores
+
+User-agent: *
+Allow: /
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+
+# Desallows (si aplica)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Sitemap
+Sitemap: https://ncfiscal.mx/sitemap.xml
+
+# Velocidad de rastreo
+Crawl-delay: 1
+
+# Regla específica para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0

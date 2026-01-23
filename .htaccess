@@ -1,0 +1,67 @@
+# .htaccess - Optimización SEO y rendimiento para NC FiscAl
+
+# Habilitar mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Remover www si está presente
+    RewriteCond %{HTTP_HOST} ^www\.ncfiscal\.mx$ [NC]
+    RewriteRule ^(.*)$ https://ncfiscal.mx/$1 [R=301,L]
+    
+    # Forzar HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Compresión GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache del navegador
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imágenes
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS y JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # Documentos
+    ExpiresByType text/html "access plus 7 days"
+    ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+
+# Encabezados de caché
+<IfModule mod_headers.c>
+    # Cache Control
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|svg|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    <FilesMatch "\.(html|xml)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+    
+    # Seguridad
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Tipos MIME
+<IfModule mod_mime.c>
+    AddType application/json .json
+    AddType application/xml .xml
+    AddType text/xml .xml
+    AddEncoding gzip .gz
+</IfModule>

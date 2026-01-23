@@ -1,0 +1,198 @@
+=============================================================
+              GUÍA DE OPTIMIZACIÓN SEO - NC FISCAL
+=============================================================
+
+CAMBIOS IMPLEMENTADOS - 23 de enero de 2026
+============================================================
+
+1. OPTIMIZACIÓN DE TÍTULOS (Title Tags)
+   ✓ Cada página tiene un título único y descriptivo
+   ✓ Incluye palabras clave principales
+   ✓ Formato: [Página] | NC FiscAl - [Descripción]
+   
+   Títulos aplicados:
+   - index.html: "NC FiscAl - Asesoría Fiscal y Consultoría de Negocios en Monterrey"
+   - asesoria-fiscal.html: "Asesoría Fiscal Profesional en Monterrey | NC FiscAl"
+   - contactanos.html: "Contacto | NC FiscAl - Asesoría Fiscal en Monterrey"
+   - quienes-somos.html: "Quiénes Somos | NC FiscAl - Consultores Expertos"
+   - servicios-contabilidad.html: "Servicios de Contabilidad Integrados | NC FiscAl"
+   - patente-intangibles.html: "Patentes e Intangibles | Consultoría Especializada | NC FiscAl"
+   - migracion-inversion.html: "Migración por Inversión | Asesoría Legal y Fiscal | NC FiscAl"
+
+2. META DESCRIPTIONS
+   ✓ Agregadas a todas las páginas
+   ✓ 150-160 caracteres (óptimo para Google)
+   ✓ Descriptivas e incluyen palabras clave
+   ✓ Llamadas a la acción implícitas
+
+3. META KEYWORDS
+   ✓ Palabras clave relevantes por página
+   ✓ Relacionadas con los servicios ofrecidos
+
+4. CANONICAL TAGS
+   ✓ Agregados a cada página para evitar duplicados
+   ✓ Formato: https://ncfiscal.mx/[página].html
+
+5. OPEN GRAPH TAGS (para compartir en redes)
+   ✓ og:title - Título optimizado para redes
+   ✓ og:description - Descripción para redes
+   ✓ og:type - Tipo de página
+   ✓ og:url - URL canónica
+   
+6. TWITTER CARD TAGS
+   ✓ twitter:card - summary_large_image
+   ✓ twitter:title - Título optimizado
+   ✓ twitter:description - Descripción optimizada
+
+7. SCHEMA.ORG (Datos Estructurados - JSON-LD)
+   ✓ LocalBusiness - Página principal y Quiénes Somos
+   ✓ Service - Páginas de servicios
+   ✓ Organization - Información de la empresa
+   ✓ ContactPage - Página de contacto
+   
+   Beneficios:
+   - Rich snippets en resultados de búsqueda
+   - Mejor posicionamiento en Google
+   - Información más completa en Knowledge Graph
+
+8. SITEMAP.XML
+   Creado: sitemap.xml
+   ✓ Todas las 7 páginas incluidas
+   ✓ Prioridades asignadas (1.0 para home, 0.9 para servicios, 0.8 para otras)
+   ✓ Frecuencia de cambio especificada
+   ✓ Última fecha de modificación
+
+9. ROBOTS.TXT
+   Creado: robots.txt
+   ✓ Permite acceso a buscadores
+   ✓ Especifica ubicación del sitemap
+   ✓ Controla velocidad de rastreo
+   ✓ Bloquea directorios no indexables
+
+10. .HTACCESS (Optimización de Servidor)
+    Creado: .htaccess
+    ✓ HTTPS enforcement (redirección forzada)
+    ✓ Eliminación de www
+    ✓ Compresión GZIP
+    ✓ Cache del navegador (1 año para imágenes, 1 mes para CSS/JS)
+    ✓ Headers de seguridad (X-Content-Type-Options, X-Frame-Options)
+    
+    Beneficios:
+    - Mejor velocidad de carga
+    - Reducción de ancho de banda
+    - Mejor seguridad
+
+============================================================
+RECOMENDACIONES ADICIONALES FUTURAS
+============================================================
+
+1. Google Search Console
+   - Verificar propiedad del sitio
+   - Enviar sitemap.xml
+   - Monitorear indexación
+   - Revisar errores de rastreo
+
+2. Google Analytics
+   - Implementar GA4
+   - Rastrear conversiones
+   - Analizar comportamiento de usuarios
+
+3. Contenido
+   - Crear blog con artículos sobre impuestos
+   - Actualizar regularmente
+   - Usar palabras clave long-tail
+
+4. Link Building
+   - Obtener backlinks de sitios relevantes
+   - Directorios de negocios
+   - Asociaciones profesionales
+
+5. Local SEO
+   - Google My Business (si está disponible)
+   - Reseñas de clientes
+   - Citas en directorios locales
+
+6. Velocidad
+   - Optimizar imágenes
+   - Usar CDN
+   - Minificar CSS/JavaScript
+
+7. Mobile Optimization
+   - Ya está implementado responsive design
+   - Verificar velocidad en móvil
+   - Considerar Progressive Web App (PWA)
+
+============================================================
+KEYWORDS PRINCIPALES POR PÁGINA
+============================================================
+
+INDEX:
+asesoría fiscal, contabilidad, patentes, intangibles, migración 
+inversión, Monterrey, consultoría negocios
+
+ASESORÍA FISCAL:
+asesoría fiscal, impuestos, consultoría fiscal, Monterrey, 
+normativa fiscal, declaración impuestos
+
+CONTACTO:
+contacto, asesoría fiscal, consultoría, Monterrey, 
+formulario contacto, consulta gratuita
+
+QUIÉNES SOMOS:
+quiénes somos, equipo, consultores expertos, NC FiscAl, 
+Monterrey, asesoría fiscal
+
+CONTABILIDAD:
+contabilidad, servicios contables, contabilidad integrada, 
+asesoría contable, Monterrey, empresas
+
+PATENTES:
+patentes, intangibles, propiedad intelectual, derechos autor, 
+marcas, NC FiscAl, Monterrey
+
+MIGRACIÓN:
+migración inversión, visa inversionista, inversión extranjera, 
+México, Monterrey, asesoría legal fiscal
+
+============================================================
+ARCHIVOS CREADOS/MODIFICADOS
+============================================================
+
+MODIFICADOS (7 archivos HTML):
+✓ index.html - Mejorado con SEO completo
+✓ asesoria-fiscal.html - Mejorado con SEO completo
+✓ contactanos.html - Mejorado con SEO completo
+✓ quienes-somos.html - Mejorado con SEO completo
+✓ servicios-contabilidad.html - Mejorado con SEO completo
+✓ patente-intangibles.html - Mejorado con SEO completo
+✓ migracion-inversion.html - Mejorado con SEO completo
+
+CREADOS (3 nuevos archivos):
+✓ sitemap.xml - Mapa del sitio para buscadores
+✓ robots.txt - Instrucciones para buscadores
+✓ .htaccess - Configuración de servidor
+
+============================================================
+PRÓXIMOS PASOS
+============================================================
+
+1. Registrar sitio en Google Search Console
+   URL: https://search.google.com/search-console
+
+2. Registrar sitio en Bing Webmaster Tools
+   URL: https://www.bing.com/webmaster/
+
+3. Verificar indexación
+   - En Google: site:ncfiscal.mx
+   - En Bing: site:ncfiscal.mx
+
+4. Monitorear posicionamiento
+   - Usar herramientas como Semrush, Ahrefs o Ubersuggest
+   - Rastrear keywords principales
+
+5. Crear contenido estratégico
+   - Blog posts sobre impuestos
+   - Guías fiscales
+   - Preguntas frecuentes (FAQ)
+
+=============================================================
