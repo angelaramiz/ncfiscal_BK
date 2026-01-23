@@ -11,12 +11,12 @@
         <div class="header-container">
             <a href="index.html" class="logo">NC FiscAl</a>
             <button class="header-toggle" onclick="toggleHeader()">☰</button>
+            <nav class="header-nav" id="header-nav">
+                <a href="quienes-somos.html">Quiénes Somos</a>
+                <a href="contactanos.html">Contáctanos</a>
+                <a href="javascript:void(0)" onclick="toggleMenu()">Servicios ▼</a>
+            </nav>
         </div>
-        <nav class="header-nav" id="header-nav">
-            <a href="quienes-somos.html">Quiénes Somos</a>
-            <a href="contactanos.html">Contáctanos</a>
-            <a href="javascript:void(0)" onclick="toggleMenu()">Servicios ▼</a>
-        </nav>
     </header>
 
     <div id="backdrop" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 50;" onclick="closeMenu(); closeHeader()"></div>

@@ -92,6 +92,8 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 header a.logo {
@@ -114,6 +116,9 @@ header nav {
     gap: 1rem;
     align-items: center;
     pointer-events: none;
+    order: 3;
+    width: 100%;
+    flex-basis: 100%;
 }
 
 .header-nav.open {
@@ -351,43 +356,6 @@ li {
         display: flex !important;
     }
 
-    .header-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, rgba(45, 45, 45, 0.95) 0%, rgba(0, 102, 204, 0.05) 100%);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        border-bottom: 4px solid var(--color-orange);
-        border-left: 2px solid var(--color-blue);
-        border-right: 2px solid var(--color-blue);
-        z-index: 150;
-    }
-
-    .header-nav.open {
-        max-height: 300px;
-        padding: 1rem 1.5rem;
-        pointer-events: auto;
-    }
-
-    .header-nav a {
-        width: 100%;
-        padding: 0.6rem 0;
-        border-bottom: 1px solid rgba(255, 140, 66, 0.2);
-        display: block;
-        cursor: pointer;
-        pointer-events: auto;
-    }
-
-    .header-nav a:last-child {
-        border-bottom: none;
-    }
-
     main {
         padding: 2rem 1.5rem;
     }
@@ -431,44 +399,6 @@ li {
 
     header a.logo {
         font-size: 1.1rem;
-    }
-
-    .header-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, rgba(45, 45, 45, 0.95) 0%, rgba(0, 102, 204, 0.05) 100%);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        border-bottom: 4px solid var(--color-orange);
-        border-left: 2px solid var(--color-blue);
-        border-right: 2px solid var(--color-blue);
-        z-index: 150;
-    }
-
-    .header-nav.open {
-        max-height: 250px;
-        padding: 0.8rem 1rem;
-        pointer-events: auto;
-    }
-
-    .header-nav a {
-        width: 100%;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(255, 140, 66, 0.2);
-        display: block;
-        font-size: 0.9rem;
-        cursor: pointer;
-        pointer-events: auto;
-    }
-
-    .header-nav a:last-child {
-        border-bottom: none;
     }
 
     .header-toggle {
@@ -537,44 +467,6 @@ li {
 
     header a.logo {
         font-size: 1rem;
-    }
-
-    .header-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, rgba(45, 45, 45, 0.95) 0%, rgba(0, 102, 204, 0.05) 100%);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        border-bottom: 4px solid var(--color-orange);
-        border-left: 2px solid var(--color-blue);
-        border-right: 2px solid var(--color-blue);
-        z-index: 150;
-    }
-
-    .header-nav.open {
-        max-height: 220px;
-        padding: 0.8rem;
-        pointer-events: auto;
-    }
-
-    .header-nav a {
-        width: 100%;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(255, 140, 66, 0.2);
-        display: block;
-        font-size: 0.9rem;
-        cursor: pointer;
-        pointer-events: auto;
-    }
-
-    .header-nav a:last-child {
-        border-bottom: none;
     }
 
     .header-toggle {
@@ -731,9 +623,129 @@ li {
     }
 }
 
+/* Desktop (≥992px) */
 @media (min-width: 992px) {
+    .header-container {
+        flex-wrap: nowrap;
+    }
+
+    .header-nav {
+        order: 2;
+        width: auto;
+        flex-basis: auto;
+        flex-direction: row;
+        position: static;
+        background: none;
+        padding: 0;
+        max-height: none;
+        overflow: visible;
+        border: none;
+        pointer-events: auto;
+    }
+
+    .header-nav.open {
+        pointer-events: auto;
+    }
+
+    .header-nav a {
+        width: auto;
+        padding: 0.5rem 1rem;
+        border-bottom: 2px solid transparent;
+        display: inline-block;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    .header-toggle {
+        display: none !important;
+    }
+
     .hidden-desktop {
         display: none !important;
+    }
+}
+
+/* Tablets (768px-991px) y Mobile */
+@media (max-width: 991px) {
+    .header-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, rgba(45, 45, 45, 0.95) 0%, rgba(0, 102, 204, 0.05) 100%);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-bottom: 4px solid var(--color-orange);
+        border-left: 2px solid var(--color-blue);
+        border-right: 2px solid var(--color-blue);
+        z-index: 150;
+        order: 3;
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .header-nav.open {
+        pointer-events: auto;
+    }
+
+    .header-nav a {
+        width: 100%;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 140, 66, 0.2);
+        display: block;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    .header-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .header-toggle {
+        display: flex !important;
+    }
+}
+
+/* Tablets Grandes (768px-991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-nav.open {
+        max-height: 300px;
+        padding: 1rem 1.5rem;
+    }
+
+    .header-nav a {
+        padding: 0.6rem 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* Móviles Medianos (576px-767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-nav.open {
+        max-height: 250px;
+        padding: 0.8rem 1rem;
+    }
+
+    .header-nav a {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles Pequeños (<576px) */
+@media (max-width: 575px) {
+    .header-nav.open {
+        max-height: 220px;
+        padding: 0.8rem;
+    }
+
+    .header-nav a {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
     }
 }
 
