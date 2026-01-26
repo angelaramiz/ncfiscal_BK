@@ -31,14 +31,18 @@
     </script>
 </head>
 <body>
+    <video autoplay muted loop style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="Cerro_silla_MTY.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">NC FiscAl</a>
             <button class="header-toggle" onclick="toggleHeader()">☰</button>
             <nav class="header-nav" id="header-nav">
-                <a href="quienes-somos.html">Quiénes Somos</a>
-                <a href="contactanos.html">Contáctanos</a>
-                <a href="javascript:void(0)" onclick="toggleMenu()">Servicios ▼</a>
+                <a style="color: var(--color-blue-light);" href="quienes-somos.html">Quiénes Somos</a>
+                <a style="color: var(--color-blue-light);" href="contactanos.html">Contáctanos</a>
+                <a style="color: var(--color-blue-light);" href="javascript:void(0)" onclick="toggleMenu()">Servicios ▼</a>
             </nav>
         </div>
     </header>
@@ -46,11 +50,11 @@
     <div id="backdrop" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 50;" onclick="closeMenu(); closeHeader()"></div>
     
     <nav id="nav-menu" style="display: none; position: fixed; top: 0; right: 0; height: 100vh; width: 100%; max-width: 300px; background: var(--color-dark); padding: 2rem 1rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 300; border-left: 4px solid var(--color-blue);">
-        <a href="index.html" style="display: block; margin: 1rem 0; color: var(--color-orange-light); text-decoration: none; font-weight: 600;">Inicio</a>
-        <a href="asesoria-fiscal.html" style="display: block; margin: 1rem 0; color: var(--color-orange-light); text-decoration: none; font-weight: 600;">Asesoría Fiscal</a>
-        <a href="servicios-contabilidad.html" style="display: block; margin: 1rem 0; color: var(--color-orange-light); text-decoration: none; font-weight: 600;">Servicios Integrados y Contabilidad</a>
-        <a href="patente-intangibles.html" style="display: block; margin: 1rem 0; color: var(--color-orange-light); text-decoration: none; font-weight: 600;">Patente e Intangibles</a>
-        <a href="migracion-inversion.html" style="display: block; margin: 1rem 0; color: var(--color-orange-light); text-decoration: none; font-weight: 600;">Migración por Inversión</a>
+        <a href="index.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Inicio</a>
+        <a href="asesoria-fiscal.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Asesoría Fiscal y Patrimonial</a>
+        <a href="servicios-contabilidad.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Servicios Integrados y Contabilidad</a>
+        <a href="patente-intangibles.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Patente e Intangibles</a>
+        <a href="migracion-inversion.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Migración por Inversión</a>
     </nav>
 
     <main>
@@ -62,15 +66,15 @@
                 <h3 style="color: var(--color-orange-light); margin-bottom: 1rem;">Nuestros Servicios</h3>
                 <ul style="list-style: none; margin-left: 0;">
                     <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--color-orange);">▸</span>
+                        <span style="position: absolute; left: 0; color: var(--color-orange-light);">▸</span>
                         Obtén una segunda residencia o ciudadanía por inversión
                     </li>
                     <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--color-orange);">▸</span>
+                        <span style="position: absolute; left: 0; color: var(--color-orange-light);">▸</span>
                         Asesoría integral en procesos migratorios
                     </li>
                     <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--color-orange);">▸</span>
+                        <span style="position: absolute; left: 0; color: var(--color-orange-light);">▸</span>
                         Cumplimiento normativo internacional
                     </li>
                 </ul>
@@ -127,5 +131,8 @@
         }
     </script>
 </body>
+<footer style="text-align: center; padding: 1rem; background: var(--color-dark); color: var(--color-white);">
+    Derechos reservados de NC FiscAl 2026
+</footer>
 </html>
 

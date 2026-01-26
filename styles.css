@@ -8,9 +8,11 @@
     --color-dark: #1a1a1a;
     --color-dark-secondary: #2d2d2d;
     --color-orange: #f5f5f5;
-    --color-orange-light: #3399ff;
+    --color-orange-light: #ffffff;
+    --color-orange-light-rgb: #ffff;
     --color-orange-dark: #0066cc;
     --color-blue: #0066cc;
+    --color-blue-rgb: 0, 102, 204;
     --color-blue-light: #3399ff;
     --color-blue-dark: #004d99;
     --color-white: #f5f5f5;
@@ -159,7 +161,7 @@ header nav {
 }
 
 .header-toggle:hover {
-    background-color: rgba(255, 140, 66, 0.1);
+    background-color: rgba(var(--color-orange-light-rgb), 0.1);
     color: var(--color-orange);
 }
 
@@ -247,7 +249,7 @@ input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: var(--color-blue-light);
     box-shadow: 0 0 12px rgba(0, 102, 204, 0.4);
-    background-color: rgba(0, 102, 204, 0.1);
+    background-color: rgba(var(--color-blue-rgb), 0.1);
 }
 
 label {
@@ -1067,7 +1069,7 @@ section {
 }
 
 .bg-blue-accent {
-    background: rgba(0, 102, 204, 0.1);
+    background: rgba(var(--color-blue-rgb), 0.1);
     border-left: 4px solid var(--color-blue);
     padding-left: 1rem;
 }
