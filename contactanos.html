@@ -53,24 +53,24 @@
 
     <main style="min-height: calc(100vh - 70px); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3rem 2rem; text-align: center;">
         <div style="max-width: 600px; width: 100%;">
-            <h1 style="margin-bottom: 1rem;"><span style="color: var(--color-blue-light);">Contáctanos</span></h1>
-            <p style="margin-bottom: 2rem; color: var(--color-blue-light);">Estamos aquí para ayudarte. Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.</p>
+            <h1 style="margin-bottom: 2rem;"><span style="color: var(--color-blue-dark);">Contáctanos</span></h1>
+            <p style="margin-bottom: 2rem; color: var(--color-blue-dark);">Estamos aquí para ayudarte. Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.</p>
             
-            <form style="background: linear-gradient(150deg, rgba(45, 45, 45, 0.75) 100%, rgba(0, 102, 204, 0.1) 0%); padding: 2rem; border-radius: 8px; border: 2px solid var(--color-blue); box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3); text-align: left;">
+            <form style="background: linear-gradient(150deg, rgba(45, 45, 45, 0.85) 100%, rgba(0, 102, 204, 0.1) 0%); padding: 2rem; border-radius: 8px; border: 2px solid var(--color-blue); box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3); text-align: left;">
                 <div style="margin-bottom: 1.5rem;">
-                    <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--color-blue-light); font-weight: 600;">Nombre Completo *</label>
+                    <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--color-orange-light); font-weight: 600;">Nombre Completo *</label>
                     <input type="text" id="name" name="name" style="width: 100%; padding: 0.75rem; background-color: var(--color-dark-secondary); border: 2px solid var(--color-blue); color: var(--color-white); border-radius: 4px; font-size: 1rem; transition: all 0.3s ease;" required>
                 </div>
                 <div style="margin-bottom: 1.5rem;">
-                    <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--color-blue-light); font-weight: 600;">Correo Electrónico *</label>
+                    <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--color-orange-light); font-weight: 600;">Correo Electrónico *</label>
                     <input type="email" id="email" name="email" style="width: 100%; padding: 0.75rem; background-color: var(--color-dark-secondary); border: 2px solid var(--color-blue); color: var(--color-white); border-radius: 4px; font-size: 1rem; transition: all 0.3s ease;" required>
                 </div>
                 <div style="margin-bottom: 1.5rem;">
-                    <label for="phone" style="display: block; margin-bottom: 0.5rem; color: var(--color-blue-light); font-weight: 600;">Teléfono</label>
+                    <label for="phone" style="display: block; margin-bottom: 0.5rem; color: var(--color-orange-light); font-weight: 600;">Teléfono</label>
                     <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.75rem; background-color: var(--color-dark-secondary); border: 2px solid var(--color-blue); color: var(--color-white); border-radius: 4px; font-size: 1rem; transition: all 0.3s ease;">
                 </div>
                 <div style="margin-bottom: 1.5rem;">
-                    <label for="services" style="display: block; margin-bottom: 0.5rem; color: var(--color-blue-light); font-weight: 600;">Tipo de Servicio *</label>
+                    <label for="services" style="display: block; margin-bottom: 0.5rem; color: var(--color-orange-light); font-weight: 600;">Tipo de Servicio *</label>
                     <select id="services" name="services" style="width: 100%; padding: 0.75rem; background-color: var(--color-dark-secondary); border: 2px solid var(--color-blue); color: var(--color-white); border-radius: 4px; font-size: 1rem; transition: all 0.3s ease;" required>
                         <option value="">Selecciona un tipo de servicio</option>
                         <option value="asesoria-fiscal">Asesoría Fiscal y Patrimonial</option>
@@ -80,19 +80,19 @@
                     </select>
                 </div>
                 <div style="margin-bottom: 1.5rem;">
-                    <label for="specific-service" style="display: block; margin-bottom: 0.5rem; color: var(--color-blue-light); font-weight: 600;">Servicio Específico *</label>
+                    <label for="specific-service" style="display: block; margin-bottom: 0.5rem; color: var(--color-orange-light); font-weight: 600;">Servicio Específico *</label>
                     <select id="specific-service" name="specific-service" style="width: 100%; padding: 0.75rem; background-color: var(--color-dark-secondary); border: 2px solid var(--color-blue); color: var(--color-white); border-radius: 4px; font-size: 1rem; transition: all 0.3s ease;" required disabled>
                         <option value="">Primero selecciona un tipo de servicio</option>
                     </select>
                 </div>
                 <div style="margin-bottom: 1.5rem;">
-                    <label for="message" style="display: block; margin-bottom: 0.5rem; color: var(--color-blue-light); font-weight: 600;">Mensaje *</label>
+                    <label for="message" style="display: block; margin-bottom: 0.5rem; color: var(--color-orange-light); font-weight: 600;">Mensaje *</label>
                     <textarea id="message" name="message" rows="5" style="width: 100%; padding: 0.75rem; background-color: var(--color-dark-secondary); border: 2px solid var(--color-blue); color: var(--color-white); border-radius: 4px; font-size: 1rem; resize: vertical; transition: all 0.3s ease;" required></textarea>
                 </div>
                 <button type="submit" class="btn " style="width: 100%; text-decoration: none;">Enviar Mensaje</button>
             </form>
 
-            <section style="background: linear-gradient(150deg, rgba(45, 45, 45, .75) 100%, rgba(0, 102, 204, .2) 0%); padding: 2rem; border-radius: 8px; border: 2px solid var(--color-blue); box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3); text-align: left;">
+            <section style="background: linear-gradient(150deg, rgba(45, 45, 45, .85) 100%, rgba(0, 102, 204, .2) 0%); padding: 2rem; border-radius: 8px; border: 2px solid var(--color-blue); box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3); text-align: left;">
                 <h2 style="text-align: center; color: var(--color-blue-light); margin-bottom: 1.5rem;">Información de Contacto</h2>
                 <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
                     
