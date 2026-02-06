@@ -7,6 +7,7 @@
     <meta name="description" content="Contacta a NC FiscAl para consultas de asesoría fiscal y patrimonial, contabilidad y servicios de consultoría en Monterrey. Resuelve tus dudas sobre impuestos, planificación patrimonial e inversión.">
     <meta name="keywords" content="contacto, asesoría fiscal, asesoría patrimonial, consultoría, Monterrey, formulario contacto, consulta gratuita">
     <meta name="author" content="NC FiscAl">
+    <link rel="icon" href="/html/src/logo.svg" type="image/svg+xml">
     <link rel="canonical" href="https://ncfiscal.mx/contactanos.html">
     <meta property="og:title" content="Contacto | NC FiscAl">
     <meta property="og:description" content="Ponte en contacto con nuestros expertos en asesoría fiscal, patrimonial y consultoría de negocios.">
@@ -25,31 +26,8 @@
     </script>
 </head>
 <body>
-    <video autoplay muted loop style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-        <source src="/html/src/Cerro_silla_MTY.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <header>
-        <div class="header-container">
-            <a href="/" class="logo">NC FiscAl</a>
-            <button class="header-toggle" onclick="toggleHeader()">☰</button>
-            <nav class="header-nav" id="header-nav">
-                <a style="color: var(--color-blue-light);" href="/html/quienes-somos.html">Quiénes Somos</a>
-                <a style="color: var(--color-blue-light);" href="/html/contactanos.html">Contáctanos</a>
-                <a style="color: var(--color-blue-light);" href="javascript:void(0)" onclick="toggleMenu()">Servicios ▼</a>
-            </nav>
-        </div>
-    </header>
+    <script src="/html/background-component.js"></script>
 
-    <div id="backdrop" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 50;" onclick="closeMenu(); closeHeader()"></div>
-    
-    <nav id="nav-menu" style="display: none; position: fixed; top: 0; right: 0; height: 100vh; width: 100%; max-width: 300px; background: var(--color-dark); padding: 2rem 1rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 300; border-left: 4px solid var(--color-blue);">
-        <a href="/" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Inicio</a>
-        <a href="/html/asesoria-fiscal.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Asesoría Fiscal y Patrimonial</a>
-        <a href="/html/servicios-contabilidad.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Servicios Integrados y Contabilidad</a>
-        <a href="/html/patente-intangibles.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Patente e Intangibles</a>
-        <a href="/html/migracion-inversion.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600;">Migración por Inversión</a>
-    </nav>
 
     <main style="min-height: calc(100vh - 70px); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3rem 2rem; text-align: center;">
         <div style="max-width: 600px; width: 100%;">
@@ -280,48 +258,9 @@
             formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
-        function toggleMenu() {
-            const isOpen = nav.style.transform === 'translateX(0px)';
-            if (isOpen) {
-                closeMenu();
-            } else {
-                openMenu();
-            }
-        }
-
-        function openMenu() {
-            nav.style.transform = 'translateX(0)';
-            nav.style.display = 'block';
-            backdrop.style.display = 'block';
-        }
-
-        function closeMenu() {
-            nav.style.transform = 'translateX(100%)';
-            backdrop.style.display = 'none';
-        }
-
-        function toggleHeader() {
-            const headerNav = document.getElementById('header-nav');
-            const isOpen = headerNav.classList.contains('open');
-            if (isOpen) {
-                closeHeader();
-            } else {
-                openHeader();
-            }
-        }
-
-        function openHeader() {
-            const headerNav = document.getElementById('header-nav');
-            headerNav.classList.add('open');
-            backdrop.style.display = 'block';
-        }
-
-        function closeHeader() {
-            const headerNav = document.getElementById('header-nav');
-            headerNav.classList.remove('open');
-            backdrop.style.display = 'none';
-        }
+        // Las funciones del menú se cargan desde header-component.js
     </script>
+    <script src="/html/header-component.js"></script>
 </body>
 <footer style="text-align: center; padding: 1rem; background: var(--color-dark); color: var(--color-white);">
     Derechos reservados de NC FiscAl 2026
