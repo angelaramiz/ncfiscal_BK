@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerHTML = `
     <header style="background-color: #01284f;">
         <div class="header-container">
-            <a href="/" class="logo" style="font-family: 'PT Serif', serif; font-weight: 700; ;">NC-FiscAL</a>
+            <a href="/" class="logo" style="font-family: 'PT Serif', serif; font-weight: 700; ;">NCFiscAL</a>
             <button class="header-toggle" onclick="toggleHeader()">☰</button>
             <nav class="header-nav" id="header-nav">
                 <a style="color: var(--color-orange);" href="/html/quienes-somos.html">Quiénes Somos</a>
