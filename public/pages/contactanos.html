@@ -7,7 +7,7 @@
     <meta name="description" content="Contacta a NC FiscAl para consultas de asesoría fiscal y patrimonial, contabilidad y servicios de consultoría en Monterrey. Resuelve tus dudas sobre impuestos, planificación patrimonial e inversión.">
     <meta name="keywords" content="contacto, asesoría fiscal, asesoría patrimonial, consultoría, Monterrey, formulario contacto, consulta gratuita">
     <meta name="author" content="NC FiscAl">
-    <link rel="icon" href="/html/src/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
     <link rel="canonical" href="https://ncfiscal.mx/contactanos.html">
     <meta property="og:title" content="Contacto | NC FiscAl">
     <meta property="og:description" content="Ponte en contacto con nuestros expertos en asesoría fiscal, patrimonial y consultoría de negocios.">
@@ -16,8 +16,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contacto | NC FiscAl">
     <meta name="twitter:description" content="Ponte en contacto con nuestros expertos en asesoría fiscal y patrimonial.">
-    <link rel="preload" as="image" href="/html/src/mty.png">
-    <link rel="stylesheet" href="/html/styles.css">
+    <link rel="preload" as="image" href="../images/mty.png">
+    <link rel="stylesheet" href="../css/styles.css">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -28,7 +28,7 @@
 </head>
 <body>
     <header id="header-placeholder"></header>
-    <script src="/html/background-component.js"></script>
+    <script src="../js/components/background-component.js"></script>
 
     <main style="margin-top: 55px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3rem 2rem; text-align: center;">
         <div style="max-width: 600px; width: 100%;">
@@ -82,7 +82,7 @@
                         <p style="color: var(--color-white); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin: 0;">
                             📱 81-1860-1124
                             <a href="https://wa.me/528118601124" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s ease;" title="Contactar por WhatsApp" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="/html/src/WhatsApp.svg" alt="WhatsApp" style="width: 3rem; height: 4rem; object-fit: contain;">
+                                <img src="../images/WhatsApp.svg" alt="WhatsApp" style="width: 3rem; height: 4rem; object-fit: contain;">
                             </a>
                         </p>
                     </div>
@@ -217,7 +217,7 @@
                 // Enviar formulario vía AJAX
                 const formData = new FormData(contactForm);
                 
-                const response = await fetch('/html/send-contact.php', {
+                const response = await fetch('../js/api/send-contact.php', {
                     method: 'POST',
                     body: formData
                 });
@@ -271,9 +271,9 @@
         // Las funciones del menú se cargan desde header-component.js
     </script>
     <footer id="footer-placeholder"></footer>
-    <script src="/html/header-component.js"></script>
-    <script src="/html/services-nav-component.js"></script>
-    <script src="/html/footer-component.js"></script>
+    <script src="../js/components/header-component.js"></script>
+    <script src="../js/components/services-nav-component.js"></script>
+    <script src="../js/components/footer-component.js"></script>
 </body>
 </html>
 

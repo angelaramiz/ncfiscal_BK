@@ -2,7 +2,9 @@
 // Este componente optimiza la imagen de fondo usando CSS en lugar de elementos DOM
 
 function getBackgroundImage() {
-    return '/html/src/mty.png';
+    // Determinar si estamos en index.html o en pages/
+    const isInPages = window.location.pathname.includes('/pages/');
+    return isInPages ? '../images/mty.png' : './images/mty.png';
 }
 
 function initializeBackground() {

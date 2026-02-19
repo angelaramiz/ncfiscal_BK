@@ -2,11 +2,15 @@
 // Este componente inyecta el menú de servicios
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Detectar si estamos en index.html
-    const isIndex = window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname === '/html/';
+    // Detectar si estamos en index.html o en pages/
+    const isIndex = window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+    const isInPages = window.location.pathname.includes('/pages/');
+    
+    // Ajustar rutas según ubicación
+    const pagesPrefix = isInPages ? './' : './pages/';
     
     // Crear el enlace de Inicio solo si NO estamos en index
-    const inicioLink = isIndex ? '' : `<a href="/html/index.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Inicio</a>`;
+    const inicioLink = (isIndex && !isInPages) ? '' : `<a href="${isInPages ? '../index.html' : './index.html'}" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Inicio</a>`;
     
     // Crear el HTML del menú de servicios
     const servicesNavHTML = `
@@ -16,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <button onclick="closeServicesMenu()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--color-white); font-size: 1.5rem; cursor: pointer;">✕</button>
         <h3 style="color: var(--color-blue-light); margin-bottom: 1.5rem; margin-top: 2rem;">Nuestros Servicios</h3>
         ${inicioLink}
-        <a href="/html/asesoria-fiscal.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Asesoría Fiscal y Patrimonial</a>
-        <a href="/html/servicios-contabilidad.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Servicios Integrados y Contabilidad</a>
-        <a href="/html/patente-intangibles.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Patente e Intangibles</a>
-        <a href="/html/migracion-inversion.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Migración por Inversión</a>
+        <a href="${pagesPrefix}asesoria-fiscal.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Asesoría Fiscal y Patrimonial</a>
+        <a href="${pagesPrefix}servicios-contabilidad.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Servicios Integrados y Contabilidad</a>
+        <a href="${pagesPrefix}patente-intangibles.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Patente e Intangibles</a>
+        <a href="${pagesPrefix}migracion-inversion.html" style="display: block; margin: 1rem 0; color: var(--color-white); text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-blue-light)'" onmouseout="this.style.color='var(--color-white)'">Migración por Inversión</a>
     </nav>
     `;
 
