@@ -1,0 +1,12 @@
+# NC FISCAL - Root .htaccess (HTML + PHP API)
+
+# Set index.html as default
+DirectoryIndex index.html
+
+# Clean MIME types
+AddType text/css .css
+AddType application/javascript .js
+AddType text/html .html
+AddType application/json .json
+
+

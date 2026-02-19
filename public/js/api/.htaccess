@@ -1,0 +1,10 @@
+# /js/api/.htaccess - Allow PHP here
+
+# Enable PHP in this directory
+php_flag engine on
+
+# Allow access to PHP files
+AddType application/x-httpd-php .php
+
+# MIME types
+AddType application/json .json
