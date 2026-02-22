@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-const versionFilePath = path.join(__dirname, 'public', 'version.json');
+const versionFilePath = path.join(__dirname, '..', 'public', 'version.json');
 
 const rl = readline.createInterface({
   input: process.stdin,
