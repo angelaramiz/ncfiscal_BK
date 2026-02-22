@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-asesoria",
+  "version": "1.0.0",
+  "description": "Sistema de asesoría fiscal y contable",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "install-all": "npm install && cd backend && npm install",
+    "version": "cd backend && npm run version",
+    "version:patch": "cd backend && npm run version:patch",
+    "version:minor": "cd backend && npm run version:minor",
+    "version:major": "cd backend && npm run version:major"
+  },
+  "keywords": [
+    "asesoría",
+    "fiscal",
+    "contable",
+    "web"
+  ],
+  "author": "",
+  "license": "ISC"
+}

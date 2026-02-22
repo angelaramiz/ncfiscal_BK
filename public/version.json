@@ -1,0 +1,22 @@
+{
+  "version": "1.0.2",
+  "name": "Proyecto Asesoría",
+  "description": "Sistema de asesoría fiscal y contable",
+  "releaseDate": "2026-02-22",
+  "changelog": [
+    {
+      "version": "1.0.2",
+      "date": "2026-02-22T07:17:04.626Z",
+      "type": "patch",
+      "description": "Actualización del sistema de versionamiento y footer",
+      "changes": []
+    },
+    {
+      "version": "1.0.1",
+      "date": "2026-02-22T06:37:20.454Z",
+      "type": "patch",
+      "description": "Primera prueba del versionamiento",
+      "changes": []
+    }
+  ]
+}

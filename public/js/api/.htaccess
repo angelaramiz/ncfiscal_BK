@@ -1,10 +1,42 @@
-# /js/api/.htaccess - Allow PHP here
+# /js/api/.htaccess - Seguridad y permisos para API
 
 # Enable PHP in this directory
 php_flag engine on
 
 # Allow access to PHP files
 AddType application/x-httpd-php .php
-
-# MIME types
 AddType application/json .json
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+
+# Deshabilitar directory listing
+Options -Indexes
+
+# Limitar tamaño de POST a 5MB
+LimitRequestBody 5242880
+
+# Permitir solo métodos POST y OPTIONS
+<LimitExcept POST OPTIONS>
+    Order Allow,Deny
+    Deny from all
+</LimitExcept>
+
+# Protección contra exploits comunes
+<FilesMatch "\.php$">
+    SetHandler "proxy:unix:/run/php-fpm.sock|fcgi://localhost"
+</FilesMatch>
+
+# Evitar acceso a archivos de sistema
+<FilesMatch "(\.env|\.htaccess|config|settings)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE application/json text/html text/plain
+</IfModule>
+
