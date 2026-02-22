@@ -82,11 +82,52 @@ class VersionChecker {
     localStorage.setItem('app_version', data.latestVersion);
     localStorage.setItem('last_update_check', new Date().toISOString());
 
+    // Limpiar todos los caches del service worker
+    this.clearAllCaches();
+
     if (this.showNotification) {
       // Mostrar notificación después del delay
       setTimeout(() => {
         this.showUpdateModal(data);
       }, this.showDelayMs);
+    }
+  }
+
+  /**
+   * Limpia todos los caches del service worker
+   */
+  async clearAllCaches() {
+    try {
+      if ('caches' in window) {
+        const cacheNames = await caches.keys();
+        this.log(`🗑️ Limpiando ${cacheNames.length} caches...`);
+        
+        // Eliminar todos los caches
+        await Promise.all(
+          cacheNames.map(cacheName => {
+            this.log(`  Eliminando cache: ${cacheName}`);
+            return caches.delete(cacheName);
+          })
+        );
+        this.log('✅ Todos los caches han sido eliminados');
+      }
+    } catch (error) {
+      this.log(`⚠️ Error limpiando caches: ${error.message}`);
+    }
+
+    // Actualizar service worker
+    try {
+      if ('serviceWorker' in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        this.log(`Actualizando ${registrations.length} service workers...`);
+        
+        registrations.forEach(async (registration) => {
+          await registration.update();
+          this.log(`✅ Service worker actualizado: ${registration.scope}`);
+        });
+      }
+    } catch (error) {
+      this.log(`⚠️ Error actualizando service worker: ${error.message}`);
     }
   }
 
@@ -261,9 +302,25 @@ class VersionChecker {
     };
     reloadBtn.onclick = () => {
       this.log('🔄 Usuario clickeó: Actualizar Ahora');
-      document.body.style.opacity = '0.5';
-      document.querySelectorAll('button').forEach(b => b.disabled = true);
-      setTimeout(() => window.location.reload(true), 300);
+      
+      // Limpiar caches de forma agresiva
+      this.log('🗑️ Limpiando caches antes de recargar...');
+      this.clearAllCaches().then(() => {
+        // Forzar hard refresh después de limpiar caches
+        document.body.style.opacity = '0.5';
+        document.querySelectorAll('button').forEach(b => b.disabled = true);
+        
+        setTimeout(() => {
+          this.log('♻️ Forzando hard reload (borrar cache del navegador)...');
+          // Borrar cache: GET request con no-cache header
+          fetch(window.location.href, { cache: 'no-store' });
+          
+          // Hard reload después de 300ms
+          setTimeout(() => {
+            window.location.href = window.location.href;
+          }, 300);
+        }, 300);
+      });
     };
 
     // Botón de más tarde
@@ -336,8 +393,11 @@ class VersionChecker {
       clearInterval(this.countdownInterval);
       // Verificar si el modal aún existe (usuario no lo cerró)
       if (document.getElementById('version-update-overlay')) {
-        this.log('⏰ Auto-reload por timeout');
-        window.location.reload(true);
+        this.log('⏰ Auto-reload por timeout - Limpiando caches...');
+        this.clearAllCaches().then(() => {
+          this.log('♻️ Recargando página con cache limpio...');
+          window.location.href = window.location.href;
+        });
       }
     }, this.autoReloadDelayMs);
   }
