@@ -1,9 +1,16 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "Proyecto Asesoría",
   "description": "Sistema de asesoría fiscal y contable",
   "releaseDate": "2026-02-22",
   "changelog": [
+    {
+      "version": "1.0.4",
+      "date": "2026-02-22T07:54:45.156Z",
+      "type": "patch",
+      "description": "mejorando la limpieza de cache",
+      "changes": []
+    },
     {
       "version": "1.0.3",
       "date": "2026-02-22T07:30:46.182Z",
