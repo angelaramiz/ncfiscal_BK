@@ -2,6 +2,7 @@ php/
 *.pub
 *.php
 capturas-ejemplo/
+bump-version.js
 
 # Dependencias Node
 node_modules/
